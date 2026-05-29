@@ -1,0 +1,12 @@
+{
+  "producto1": {
+    "nombre": "Laptop",
+    "precio": 1200,
+    "cantidad": 25
+  },
+  "producto2": {
+    "nombre": "Smartphone",
+    "precio": 850,
+    "cantidad": 35
+  }
+}
