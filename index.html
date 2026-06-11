@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Minecraft</title>
+</head>
+<body>
+
+<div class="calculadora">
+
+    <div class="barra-titulo">
+         Calculadora
+    </div>
+
+    <input type="number" id="num1" placeholder="Primer número">
+
+    <input type="number" id="num2" placeholder="Segundo número">
+
+    <div class="fila">
+        <button onclick="calcular('sumar')">+</button>
+        <button onclick="calcular('restar')">−</button>
+    </div>
+
+    <div class="fila">
+        <button onclick="calcular('multiplicar')">×</button>
+        <button onclick="calcular('dividir')">÷</button>
+    </div>
+
+    <div id="resultado">
+        Resultado: 0
+    </div>
+
+</div>
+
+<script src="funciones.js"></script>
+
+</body>
+</html>
