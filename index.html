@@ -1,39 +1,71 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Minecraft</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+    table.table-zebra tbody tr:nth-child(odd) {
+        background-color: #87CEEB; /* Azul cielo */
+    }
+
+    table.table-zebra tbody tr:nth-child(even) {
+        background-color: #90EE90; /* Verde claro */
+    }
+</style>
 </head>
+
+<div class="overflow-x-auto container mx-auto px-4 my-8">
+  <h1 class="text-3xl font-bold mb-4"style="color: orange;">Lista de productos</h1>
+  
+
+  <label>Categorías</label>
+  <select id="filtro">
+    <option value="todos">Selecciona una categoría</option>
+    <option value="Electrónicos">Electrónicos</option>
+    <option value="Accesorios">Accesorios</option>
+    <option value="Muebles">Muebles</option>
+    <option value="Iluminación">Iluminación</option>
+    <option value="Almacenamiento">Almacenamiento</option>
+    <option value="Componentes">Componentes</option>
+    <option value="Redes">Redes</option>
+    <option value="Oficina">Oficina</option>
+    <option value="Ropa">Ropa</option>
+    <option value="Videojuegos">Videojuegos</option>
+    <option value="Hogar">Hogar</option>
+    <option value="Salud">Salud</option>
+    <option value="Herramientas">Herramientas</option>
+    <option value="Software">Software</option>
+  </select>
+
+
 <body>
+    <div class="overflow-x-auto container mx-auto px-4 my-8">
+    <h1 class="text-3xl font-bold mb-4"style="color: red;">Lista de productos</h1>
 
-<div class="calculadora">
+    <table class="table table-zebra">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+                <th>Stock</th>
+                <th>Valor Total en Stock</th>
+            </tr>
+        </thead>
+        <tbody id="products">
 
-    <div class="barra-titulo">
-         Calculadora
-    </div>
+        </tbody>
+    </table>
 
-    <input type="number" id="num1" placeholder="Primer número">
+<div>
+    <script src="productos.js"></script>
+    <script src="productos_acciones.js"></script>
 
-    <input type="number" id="num2" placeholder="Segundo número">
 
-    <div class="fila">
-        <button onclick="calcular('sumar')">+</button>
-        <button onclick="calcular('restar')">−</button>
-    </div>
 
-    <div class="fila">
-        <button onclick="calcular('multiplicar')">×</button>
-        <button onclick="calcular('dividir')">÷</button>
-    </div>
-
-    <div id="resultado">
-        Resultado: 0
-    </div>
-
-</div>
-
-<script src="funciones.js"></script>
 
 </body>
 </html>
